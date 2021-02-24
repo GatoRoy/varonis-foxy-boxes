@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import logo from './logo.svg'
 
@@ -7,6 +7,12 @@ import Plane from './components/Plane'
 import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const onRandomize = () => {
+    setCount(count + 1);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,7 +20,8 @@ function App() {
       </header>
       <main>
         <div className='options'>
-          <button>{'Randomize'}</button>
+          <button type="button" onClick={onRandomize}>{'Randomize'}</button>
+          <p>You clicked {count} times</p>
         </div>
         <div className='plane-of-planes'>
           <Plane direction='top' />

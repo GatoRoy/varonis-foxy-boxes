@@ -3,7 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import ArrowBox from '../ArrowBox'
+// import ArrowBox from '../ArrowBox'
+import RandomArrowBox from '../RandomArrowBox'
 
 import './Plane.css'
 
@@ -24,7 +25,7 @@ Plane.propTypes = {
 
 Plane.defaultProps = {
   arrows: 9,
-  arrowComponent: ArrowBox
+  arrowComponent: RandomArrowBox
 }
 
 export default Plane
